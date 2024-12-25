@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حملة توعوية عن الأمن السيبراني</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .content h1 .content h2{
+            font-size: 4rem;
+            margin: 0;
+            font-weight: bold;
+        
+        }
+
+        .content p {
+            font-size: 1rem;
+            max-width: 4000px;
+            margin: 10px 0 20px;
+            line-height: 1.6;
+        }
+       
+        #backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* لجعل الفيديو يغطي الشاشة بالكامل */
+    z-index: -1; /* وضع الفيديو في الخلف */
+}
+.content {
+    position: absolute; /* يضمن أن النص يظهر فوق الفيديو */
+    top: 50%; /* يضع النص في منتصف الصفحة عموديًا */
+    left: 50%; /* يضع النص في منتصف الصفحة أفقيًا */
+    transform: translate(-50%, -50%); /* لضبط النص في المركز تمامًا */
+    z-index: 1; /* يضمن ظهور النص فوق الفيديو */
+    color: white; /* لون النص */
+    text-align: center; /* توسيط النصوص داخل العنصر */
+    font-family: Arial, sans-serif;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.typing-effect, .typing-effect1 {
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    white-space: nowrap; /* منع النص من الالتفاف */
+    overflow: hidden; /* إخفاء النص الزائد */
+    border-right: 3px solid white; /* لإضافة مؤشر الكتابة */
+    width: 0; /* عرض النص يبدأ من الصفر */
+    animation: typing 4s steps(30, end), blink 0.5s step-end infinite;
+    direction: rtl; /* تغيير اتجاه النص إلى اليمين */
+    border-left: 3px solid white; /* مؤشر الكتابة على اليسار */
+    border-right: none; /* إزالة المؤشر من اليمين */
+    animation-fill-mode: forwards; /* يضمن بقاء النص بعد انتهاء الكتابة */
+}
+.typing-effect1 {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    white-space: nowrap; /* منع النص من الالتفاف */
+    overflow: hidden; /* إخفاء النص الزائد */
+    border-right: 3px solid white; /* لإضافة مؤشر الكتابة */
+    width:0; /* عرض النص يبدأ من الصفر */
+    animation: typing 5s steps(30, end), blink 0.5s step-end infinite;
+    direction: rtl; /* تغيير اتجاه النص إلى اليمين */
+    border-left: 3px solid white; /* مؤشر الكتابة على اليسار */
+    border-right: none; /* إزالة المؤشر من اليمين */
+    animation-fill-mode: forwards; /* يضمن بقاء النص بعد انتهاء الكتابة */
+}
+
+
+
+
+
+       </style> 
+</head>
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="IMG_5172.MP4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+    
+    <div class="content">
+        <div id="text1"class="typing-effect" ><h1>   تم اختراق  بياناتك.....</h1></div>
+  <p id="text2" style="display: none;">ما شهاهدته الان هو مجرد محاكاة توعوية, ولم يتم سحب اي بيانات حقيقية.</p>
+  <p  id="text3" style="display: none;">لكن في الواقع, يمكن للباركود ان يكون أداة خطيرة إذا لم تثقي بمصدره لفحص الباركود او الروابط المشبوهة اضغط على الاايقونة</p>
+  <br>
+  <br>
+  <div  id="text4"class="typing-effect1" style="display: none;" ><h2> لاتقوم بسمح اي باركود الا اذا كنت متأكد من مصدره لفحص الباركود او الروابط اضغط على الاايقونة</h2></div>
+  <a href="https://www.virustotal.com/gui/home/upload" target="_blank">
+    <img src="فحص.jpg" alt="check Icon" width="50" height="50" id="jpg"style="display: none;" >
+  </a>
+</div>
+<script>
+    setTimeout(function() {
+            document.getElementById('text2').style.display = 'block';
+        }, 4000);
+
+        setTimeout(function() {
+            document.getElementById('text3').style.display = 'block'; }, 6000);
+            setTimeout(function() {
+                document.getElementById('text4').style.display = 'block'; }, 8000);
+                setTimeout(function() {
+                    document.getElementById('jpg').style.display = 'block'; }, 9000);
+
+</script>
+</body>
+    </html>
